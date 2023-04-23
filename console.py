@@ -40,14 +40,14 @@ class HBNBCommand(cmd.Cmd):
         print("")
         return True
 
-    def do_create(self, line):
+    def do_create(self, arg):
         """Usage: create <class> <key 1>=<value 2> <key 2>=<value 2> ...
         Create a new class instance with given keys/values and print its id.
         """
         try:
-            if not line:
+            if not arg:
                 raise SyntaxError()
-            my_list = line.split(" ")
+            my_list = arg.split(" ")
 
             kwargs = {}
             for i in range(1, len(my_list)):
@@ -105,7 +105,7 @@ class HBNBCommand(cmd.Cmd):
         except KeyError:
             print("** no instance found **")
 
-            def do_destroy(self, line):
+    def do_destroy(self, line):
         """Deletes an instance based on the class name and id
         Exceptions:
             SyntaxError: when there is no args given
