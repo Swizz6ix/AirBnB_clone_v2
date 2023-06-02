@@ -33,11 +33,11 @@ def c(text):
     text = text.replace("_", " ")
     return "C {}".format(text)
 
+
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def python(text="is cool"):
-    """Display 'Python' followed by the value of <text>
-    
+def python(text="is cool"): 
+    """Display 'Python' followed by the value of <text>    
     Replaces any underscore in <text> with slashes.
     """
     text = text.replace("_", " ")
