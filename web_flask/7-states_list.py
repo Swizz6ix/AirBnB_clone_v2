@@ -11,6 +11,7 @@ from flask import render_template
 
 app = Flask(__name__)
 
+
 @app.route("/states_list", strict_slashes=False)
 def states_lists():
     """Displays an HTML page with a list of all State objects in DBStorage.
@@ -18,6 +19,7 @@ def states_lists():
     """
     states = storage.all("States")
     return render_template("states_list.html", states=states)
+
 
 @app.teardown_appcontext
 def teardown(exec):
