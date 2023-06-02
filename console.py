@@ -80,7 +80,7 @@ class HBNBCommand(cmd.Cmd):
         Exceptions:
             SyntaxError: when there is no args given
             NameError: when there is no object taht has the name
-            IndexError: when there is no id given
+            IndexError: when there is no id given.
             KeyError: when there is no valid id given
         """
         try:
