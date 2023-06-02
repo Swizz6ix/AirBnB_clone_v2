@@ -49,7 +49,7 @@ class TestBaseModel_instantiation(unittest.TestCase):
         self.assertLess(bm1.updated_at, bm2.updated_at)
 
 
-def test_str_representation(self):
+    def test_str_representation(self):
         dt = datetime.today()
         dt_repr = repr(dt)
         bm = BaseModel()
@@ -78,7 +78,7 @@ def test_str_representation(self):
             BaseModel(id=None, created_at=None, updated_at=None)
 
 
-def test_instantiation_with_args_and_kwargs(self):
+    def test_instantiation_with_args_and_kwargs(self):
         dt = datetime.today()
         dt_iso = dt.isoformat()
         bm = BaseModel("12", id="345", created_at=dt_iso, updated_at=dt_iso)

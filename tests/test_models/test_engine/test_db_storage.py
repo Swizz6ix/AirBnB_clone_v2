@@ -40,7 +40,7 @@ class TestDBStorage(unittest.TestCase):
             cls.user = User(email="poppy@holberton.com", password="betty")
             cls.storage._DBStorage__session.add(cls.user)
             cls.place = Place(city_id=cls.city.id, user_id=cls.user.id,
-                              name="School")
+                            name="School")
             cls.storage._DBStorage__session.add(cls.place)
             cls.amenity = Amenity(name="Wifi")
             cls.storage._DBStorage__session.add(cls.amenity)

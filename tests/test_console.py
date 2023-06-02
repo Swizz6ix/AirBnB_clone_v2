@@ -85,20 +85,21 @@ class TestHBNBCommand(unittest.TestCase):
             self.HBNB.onecmd("quit")
             self.assertEqual("", f.getvalue())
 
-def test_EOF(self):
-        """Test that EOF quits."""
-        with patch("sys.stdout", new=StringIO()) as f:
-            self.assertTrue(self.HBNB.onecmd("EOF"))
 
-    def test_create_errors(self):
-        """Test create command errors."""
-        with patch("sys.stdout", new=StringIO()) as f:
-            self.HBNB.onecmd("create")
-            self.assertEqual(
-                "** class name missing **\n", f.getvalue())
-        with patch("sys.stdout", new=StringIO()) as f:
-            self.HBNB.onecmd("create asdfsfsd")
-            self.assertEqual(
+def test_EOF(self):
+    """Test that EOF quits."""
+    with patch("sys.stdout", new=StringIO()) as f:
+        self.assertTrue(self.HBNB.onecmd("EOF"))
+
+def test_create_errors(self):
+    """Test create command errors."""
+    with patch("sys.stdout", new=StringIO()) as f:
+        self.HBNB.onecmd("create")
+        self.assertEqual(
+            "** class name missing **\n", f.getvalue())
+            with patch("sys.stdout", new=StringIO()) as f:
+                self.HBNB.onecmd("create asdfsfsd")
+                self.assertEqual(
                 "** class doesn't exist **\n", f.getvalue())
 
     @unittest.skipIf(type(models.storage) == DBStorage, "Testing DBStorage")
