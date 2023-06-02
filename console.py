@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
 
             kwargs = {}
             for i in range(1, len(my_list)):
-                if '=' in my_list[i]:
+#                if '=' in my_list[i]:
                     key, value = tuple(my_list[i].split('=', 1))
                     if value[0] == value[-1] == '"':
                         value = value.strip('"').replace("_", " ")
