@@ -86,16 +86,16 @@ class TestHBNBCommand(unittest.TestCase):
             self.assertEqual("", f.getvalue())
 
 
-def test_EOF(self):
-    """Test that EOF quits."""
-    with patch("sys.stdout", new=StringIO()) as f:
-        self.assertTrue(self.HBNB.onecmd("EOF"))
+    def test_EOF(self):
+        """Test that EOF quits."""
+        with patch("sys.stdout", new=StringIO()) as f:
+            self.assertTrue(self.HBNB.onecmd("EOF"))
 
-def test_create_errors(self):
-    """Test create command errors."""
-    with patch("sys.stdout", new=StringIO()) as f:
-        self.HBNB.onecmd("create")
-        self.assertEqual(
+    def test_create_errors(self):
+        """Test create command errors."""
+        with patch("sys.stdout", new=StringIO()) as f:
+            self.HBNB.onecmd("create")
+            self.assertEqual(
             "** class name missing **\n", f.getvalue())
             with patch("sys.stdout", new=StringIO()) as f:
                 self.HBNB.onecmd("create asdfsfsd")

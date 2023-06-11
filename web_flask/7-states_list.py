@@ -17,8 +17,8 @@ def states_lists():
     """Displays an HTML page with a list of all State objects in DBStorage.
     States are sorted by name.
     """
-    states = storage.all("States")
-    return render_template("states_list.html", states=states)
+    states = storage.all("State")
+    return render_template("7-states_list.html", states=states)
 
 
 @app.teardown_appcontext

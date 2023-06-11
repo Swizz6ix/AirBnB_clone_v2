@@ -14,8 +14,13 @@ class Amenity(BaseModel, Base):
         __tablename__ (str): The name of the MySQL table to store Amenities.
         name (sqlalchemy String): The amenity name.
         place_amenities (sqlalchemy relationship): Place-Amenity relationship.
+        __table_args__ = (
+            {'mysql_default_charset': 'latin1'}
+        )
     """
     __tablename__ = "amenities"
+    __table_args__ = (
+            {'mysql_default_charset': 'latin1'}
+        )
     name = Column(String(128), nullable=False)
-    place_amenities = relationship("Place", secondary="place_amenity",
-                                viewonly=False)
+    place_amenities = relationship("Place", secondary="place_amenity", viewonly=False)

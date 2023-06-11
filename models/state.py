@@ -17,8 +17,14 @@ class State(BaseModel, Base):
         __tablename__ (str): The name of the MySQL table to store States.
         name (sqlalchemy String): The name of the State.
         cities (sqlalchemy relationship): The State-City relationship.
+        __table_args__ = (
+            {'mysql_default_charset': 'latin1'}
+        )
     """
     __tablename__ = "states"
+    __table_args__ = (
+            {'mysql_default_charset': 'latin1'}
+        )
     name = Column(String(128), nullable=False)
     cities = relationship("City",  backref="state", cascade="delete")
 
