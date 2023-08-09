@@ -60,6 +60,11 @@
   overflow-y: scroll;
   position: absolute;
   width: 100%;
+  scrollbar-width: none;
+}
+
+.filters .popover::-webkit-scrollbar {
+  display: none;
 }
 
 /* Locations and amenities popover hover */

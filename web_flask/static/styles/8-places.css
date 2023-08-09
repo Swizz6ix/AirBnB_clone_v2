@@ -53,6 +53,40 @@
   text-align: center;
 }
 
+.places .description {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 22px;
+}
+
+.places .amenities, 
+.places .review {
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 22px;
+}
+
+.places .amenities > h2 {
+  padding-bottom: 10px;
+}
+
+.places .amenities > ul > li {
+  margin: 12px;
+  text-align: center;
+}
+
+.places .review > h3 {
+  color: #ff5a5f;
+}
+
+.places .review > h2 {
+  padding: 10px;
+}
+
+.places .review > ul {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
 /* Width of each guest/room/bathroom sticker */
 .places .max_guest,
 .places .number_rooms,
